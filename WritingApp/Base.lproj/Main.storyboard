@@ -25,12 +25,32 @@
                                 <rect key="frame" x="0.0" y="151" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="BNu-Hd-ICt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PromptView" rowHeight="150" id="BNu-Hd-ICt">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BNu-Hd-ICt" id="Rov-Ze-xcv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeu-cD-KwR">
+                                                    <rect key="frame" x="40" y="31" width="334" height="88"/>
+                                                    <color key="backgroundColor" red="0.56470588239999997" green="0.49803921569999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-iW-gNe">
+                                                    <rect key="frame" x="61" y="83" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qeu-cD-KwR" secondAttribute="trailing" constant="20" id="9tE-bd-nPO"/>
+                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="20" id="LDx-sd-W9q"/>
+                                                <constraint firstItem="BcC-iW-gNe" firstAttribute="top" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="-36" id="XM1-cg-NIK"/>
+                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="leading" secondItem="Rov-Ze-xcv" secondAttribute="leadingMargin" constant="20" id="b3Y-Fc-bM6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="20" id="fCz-Cc-Bbk"/>
+                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="leading" secondItem="BcC-iW-gNe" secondAttribute="trailing" constant="-63" id="ohi-Ci-VZa"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

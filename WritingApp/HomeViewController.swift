@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var arrayPrompts = getPrompts()
 
     override func viewDidLoad() {
         super.viewDidLoad()
