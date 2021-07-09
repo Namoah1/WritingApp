@@ -33,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeu-cD-KwR">
-                                                    <rect key="frame" x="40" y="31" width="334" height="88"/>
+                                                    <rect key="frame" x="40" y="21" width="334" height="108"/>
                                                     <color key="backgroundColor" red="0.56470588239999997" green="0.49803921569999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="promptTapped:" destination="rvH-0C-XsY" eventType="touchUpInside" id="dUs-xD-DzI"/>
@@ -48,11 +48,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Qeu-cD-KwR" secondAttribute="trailing" constant="20" id="9tE-bd-nPO"/>
-                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="20" id="LDx-sd-W9q"/>
+                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="10" id="LDx-sd-W9q"/>
                                                 <constraint firstItem="BcC-iW-gNe" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="60" id="NnQ-9s-mEJ"/>
                                                 <constraint firstItem="BcC-iW-gNe" firstAttribute="leading" secondItem="Rov-Ze-xcv" secondAttribute="leadingMargin" constant="40" id="ZFk-MY-my4"/>
                                                 <constraint firstItem="Qeu-cD-KwR" firstAttribute="leading" secondItem="Rov-Ze-xcv" secondAttribute="leadingMargin" constant="20" id="b3Y-Fc-bM6"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="20" id="fCz-Cc-Bbk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="10" id="fCz-Cc-Bbk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="BcC-iW-gNe" secondAttribute="trailing" constant="50" id="hj5-0f-HLb"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BcC-iW-gNe" secondAttribute="bottom" constant="30" id="v1J-KL-uKy"/>
                                             </constraints>
