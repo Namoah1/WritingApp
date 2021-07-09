@@ -7,25 +7,46 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     
     var arrayPrompts = getPrompts()
-
+    
+    @IBOutlet weak var promptsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        promptsTableView.delegate = self
+        promptsTableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayPrompts.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PromptView") as? PromptTableViewCell{
+            cell.promptLabel.text = arrayPrompts[indexPath.row].prompText
+            cell.promptButton.layer.cornerRadius = 8
+            cell.promptButton.backgroundColor = arrayPrompts[indexPath.row].promptBackgroundColor
+            
+            return cell
+        }else{
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    
+    @IBAction func promptTapped(_ sender: Any) {
+        print("Tapped")
+    }
+
+
 
 }

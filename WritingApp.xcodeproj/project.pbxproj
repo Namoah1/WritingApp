@@ -15,6 +15,7 @@
 		62A81B9126963102001AB408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A81B8F26963102001AB408 /* LaunchScreen.storyboard */; };
 		62A81B9D2696463F001AB408 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A81B9C2696463F001AB408 /* HomeViewController.swift */; };
 		62A81BCA2697D3D2001AB408 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A81BC92697D3D2001AB408 /* Prompt.swift */; };
+		62A81BCC2697D6A6001AB408 /* PromptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A81BCB2697D6A6001AB408 /* PromptTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		62A81B9226963102001AB408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A81B9C2696463F001AB408 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62A81BC92697D3D2001AB408 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		62A81BCB2697D6A6001AB408 /* PromptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				62A81B81269630FA001AB408 /* AppDelegate.swift */,
 				62A81B83269630FA001AB408 /* SceneDelegate.swift */,
-				62A81B9C2696463F001AB408 /* HomeViewController.swift */,
 				62A81BC92697D3D2001AB408 /* Prompt.swift */,
+				62A81B9C2696463F001AB408 /* HomeViewController.swift */,
+				62A81BCB2697D6A6001AB408 /* PromptTableViewCell.swift */,
 				62A81B87269630FA001AB408 /* Main.storyboard */,
 				62A81B8D26963102001AB408 /* Assets.xcassets */,
 				62A81B8F26963102001AB408 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A81B8C269630FB001AB408 /* WritingApp.xcdatamodeld in Sources */,
+				62A81BCC2697D6A6001AB408 /* PromptTableViewCell.swift in Sources */,
 				62A81B82269630FA001AB408 /* AppDelegate.swift in Sources */,
 				62A81B84269630FA001AB408 /* SceneDelegate.swift in Sources */,
 				62A81B9D2696463F001AB408 /* HomeViewController.swift in Sources */,

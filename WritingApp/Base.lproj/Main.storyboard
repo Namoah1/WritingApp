@@ -21,11 +21,11 @@
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cyR-dn-Z8R">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cyR-dn-Z8R">
                                 <rect key="frame" x="0.0" y="151" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PromptView" rowHeight="150" id="BNu-Hd-ICt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PromptView" rowHeight="150" id="BNu-Hd-ICt" customClass="PromptTableViewCell" customModule="WritingApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BNu-Hd-ICt" id="Rov-Ze-xcv">
@@ -35,9 +35,12 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeu-cD-KwR">
                                                     <rect key="frame" x="40" y="31" width="334" height="88"/>
                                                     <color key="backgroundColor" red="0.56470588239999997" green="0.49803921569999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="promptTapped:" destination="rvH-0C-XsY" eventType="touchUpInside" id="dUs-xD-DzI"/>
+                                                    </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-iW-gNe">
-                                                    <rect key="frame" x="61" y="83" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-iW-gNe">
+                                                    <rect key="frame" x="60" y="71" width="284" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -46,12 +49,18 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Qeu-cD-KwR" secondAttribute="trailing" constant="20" id="9tE-bd-nPO"/>
                                                 <constraint firstItem="Qeu-cD-KwR" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="20" id="LDx-sd-W9q"/>
-                                                <constraint firstItem="BcC-iW-gNe" firstAttribute="top" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="-36" id="XM1-cg-NIK"/>
+                                                <constraint firstItem="BcC-iW-gNe" firstAttribute="top" secondItem="Rov-Ze-xcv" secondAttribute="topMargin" constant="60" id="NnQ-9s-mEJ"/>
+                                                <constraint firstItem="BcC-iW-gNe" firstAttribute="leading" secondItem="Rov-Ze-xcv" secondAttribute="leadingMargin" constant="40" id="ZFk-MY-my4"/>
                                                 <constraint firstItem="Qeu-cD-KwR" firstAttribute="leading" secondItem="Rov-Ze-xcv" secondAttribute="leadingMargin" constant="20" id="b3Y-Fc-bM6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Qeu-cD-KwR" secondAttribute="bottom" constant="20" id="fCz-Cc-Bbk"/>
-                                                <constraint firstItem="Qeu-cD-KwR" firstAttribute="leading" secondItem="BcC-iW-gNe" secondAttribute="trailing" constant="-63" id="ohi-Ci-VZa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BcC-iW-gNe" secondAttribute="trailing" constant="50" id="hj5-0f-HLb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BcC-iW-gNe" secondAttribute="bottom" constant="30" id="v1J-KL-uKy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="promptButton" destination="Qeu-cD-KwR" id="tKG-LF-C0H"/>
+                                            <outlet property="promptLabel" destination="BcC-iW-gNe" id="ljh-4z-AvG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -69,6 +78,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="L9D-iZ-WKo"/>
+                    <connections>
+                        <outlet property="promptsTableView" destination="cyR-dn-Z8R" id="MGA-kl-4b5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qae-KO-Cdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
